@@ -164,3 +164,15 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #FFC400; /* Lighter yellow on hover */
 }
+
+
+
+@media (max-width: 480px) {
+    /* Adjustments for screens up to 480px wide */
+    .container {
+        max-width: 90%; /* Adjust as needed */
+        margin: 10px auto;
+    }
+    
+    /* Other styles for smaller screens */
+}
