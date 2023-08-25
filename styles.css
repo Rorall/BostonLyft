@@ -39,15 +39,14 @@ a {
 
 /* Style the header */
 header {
-    background-color: #485461;
-    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    background-color: transparent; /* Set the background color to transparent */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: none; /* Remove the box shadow */
 }
 
 /* Style the navigation menu */
@@ -164,8 +163,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #FFC400; /* Lighter yellow on hover */
 }
-
-
 
 @media (max-width: 480px) {
     /* Adjustments for screens up to 480px wide */
