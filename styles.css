@@ -1,0 +1,166 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.page {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Add scroll motion effect */
+.page {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add yellow accent color */
+a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust the size as needed */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+/* Style the header */
+header {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .page {
+        padding: 40px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Add these styles for the vehicle images */
+.vehicle-image {
+    max-width: 600px; /* Set the maximum width for the images */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Add styles to layout vehicles side by side */
+.vehicles-section .vehicle {
+    display: inline-block;
+    width: calc(50% - 20px); /* Adjust this value to create spacing between vehicles */
+    margin: 10px;
+    vertical-align: top; /* Align images at the top */
+    text-align: center;
+}
+
+/* Add these styles for alternating containers */
+.container {
+    max-width: 800px; /* Adjust this value based on your design */
+    margin: 20px auto; /* Center the containers */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add styles for alternating left and right containers */
+.container:nth-child(odd) {
+    float: left;
+    clear: left;
+    margin-right: 20px; /* Space between left and right containers */
+}
+
+.container:nth-child(even) {
+    float: right;
+    clear: right;
+    margin-left: 20px; /* Space between left and right containers */
+}
+
+/* Increase text size */
+h1, h2, h3 {
+    font-size: 2rem; /* Adjust the size as needed */
+}
+
+p {
+    font-size: 1rem; /* Adjust the size as needed */
+}
+
+/* Style the "Book Now" button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Playful yellow background color */
+    color: #485461; /* Dark blue text color */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+.cta-button:hover {
+    background-color: #FFC400; /* Lighter yellow on hover */
+}
+
+/* Style the navigation links as container buttons */
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Playful yellow background color */
+    color: #485461; /* Dark blue text color */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    margin-top: 20px; /* Add spacing between navigation links */
+}
+
+nav ul li a:hover {
+    background-color: #FFC400; /* Lighter yellow on hover */
+}

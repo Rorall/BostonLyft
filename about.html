@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+        color: rgb(0, 0, 0);
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <h2>About Us</h2>
+        <p>We are a dedicated taxi service that takes pride in delivering safe, reliable, and convenient transportation solutions to our valued customers. With a strong commitment to quality and customer satisfaction, we have established ourselves as a trusted choice in the industry.</p>
+        <p>Our experienced team of professional drivers is devoted to providing you with a comfortable and enjoyable journey. Whether you're heading to a business meeting, catching a flight, or exploring the city, we are here to ensure a seamless and stress-free travel experience.</p>
+        <p>As a customer-centric company, we prioritize your needs and preferences. Our modern fleet of vehicles is meticulously maintained, and we offer a range of options to suit your requirements. From spacious SUVs for group travel to stylish sedans for individuals, we have a vehicle for every occasion.</p>
+        <p>At our taxi service, your safety is paramount. We adhere to strict safety protocols and standards to ensure that your ride is secure and worry-free. With transparent pricing and courteous drivers, you can trust us to provide exceptional service every time you choose to ride with us.</p>
+        <p>Thank you for considering us as your transportation partner. We look forward to exceeding your expectations and being a part of your memorable journeys.</p>
+    </div>
+    
+
+    
+
+    <script>
+        // Add scroll motion effect
+        const pages = document.querySelectorAll('.page');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        pages.forEach(page => {
+            observer.observe(page);
+        });
+    </script>
+</body>

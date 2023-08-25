@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Book With Us</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     
+    <div class="container">
+        <h2>Booking</h2>
+        <p>To book a taxi, you can use the form below or give us a call.</p>
+        
+        <div class="booking-options">
+            <div class="email-booking">
+                <h3>Book via Email</h3>
+                <p>Fill out the form and we'll get back to you:</p>
+                <form action="mailto:admasugemechu@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit" class="cta-button">Submit</button>
+                </form>
+            </div>
+            
+            <div class="phone-booking">
+                <h3>Book via Phone</h3>
+                <p>Give us a call to book a taxi:</p>
+                <p>Call us at: <a href="tel:617-230-0247" style="color: black;">617-230-0247</a></p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Add scroll motion effect
+        const pages = document.querySelectorAll('.page');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        pages.forEach(page => {
+            observer.observe(page);
+        });
+    </script>
+</body>

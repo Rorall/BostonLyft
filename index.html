@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Taxi Service</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="home" class="page active">
+        <div class="hero">
+            <h1>Welcome to Our Taxi Service</h1>
+            <h1>Your Comfortable and Reliable Choice</h1>
+            <a href="booking.html" class="cta-button">Book Now</a>
+        </div>
+    </div>
+    
+    <section class="service-highlights">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Comfortable and Clean Vehicles</li>
+                <li>Punctual and Professional Drivers</li>
+                <li>24/7 Availability</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a dedicated taxi service...</p>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"Excellent service! The best taxi company I've used."</p>
+            </div>
+            <!-- Add more testimonials here -->
+        </div>
+    </section>
+    
+    <section class="vehicles-section">
+        <div class="container">
+            <h2>Our Fleet</h2>
+            <div class="vehicle">
+                <img src="images/2023_Toyota_RAV4_Woodland_Edition_001%20image.webp" alt="Toyota RAV4" class="vehicle-image" />
+                <h3>Toyota RAV4</h3>
+                <p>Travel in comfort and style...</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="vehicle">
+                <img src="images/gmc_acadia_2012%20image.webp" alt="GMC Acadia" class="vehicle-image" />
+                <h3>GMC Acadia</h3>
+                <p>Spacious and reliable...</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or ready to book a ride?</p>
+            <p>Call us at: <a href="tel:617-230-0247" style="color: black;">617-230-0247</a></p></p>
+            <p>Email: info@taxiservice.com</p>
+        </div>
+    </section>
+    
+    <script>
+        // Add scroll motion effect
+        const pages = document.querySelectorAll('.page');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        pages.forEach(page => {
+            observer.observe(page);
+        });
+    </script>
+</body>
+</html>
