@@ -37,17 +37,7 @@ a {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
 }
 
-/* Style the header */
-header {
-    background-color: transparent; /* Set the background color to transparent */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 10px;
-    box-shadow: none; /* Remove the box shadow */
-}
+
 
 /* Style the navigation menu */
 nav {
