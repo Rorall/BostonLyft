@@ -145,7 +145,7 @@ nav ul li a {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    font-family: 'Comic Sans MS', sans-serif; /* Playful font */
     margin-top: 20px; /* Add spacing between navigation links */
 }
 
